@@ -447,8 +447,8 @@ background: linear-gradient(to right, rgb(146, 23, 77) 9.38%, rgb(228, 29, 92) 8
 }
 
 .covlob2{
-    height: 15%;
-    width: 15%;
+    height: 75%;
+    width: 25%;
 
 }
 
@@ -465,7 +465,7 @@ background: linear-gradient(to right, rgb(146, 23, 77) 9.38%, rgb(228, 29, 92) 8
 }
 .shadow{
     position: absolute;
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(0, 0, 0, 0.7);
     max-width: 100%;
     height: auto;
    
@@ -488,4 +488,12 @@ background: linear-gradient(to right, rgb(146, 23, 77) 9.38%, rgb(228, 29, 92) 8
     background:#51a351;
     display: none;
    
+}
+.roms{
+    background: none;
+    font-weight: bold;
+    margin-top: 30%;
+    padding: 10px 10px;
+ 
+ 
 }
