@@ -42,34 +42,7 @@ body {
 
 
 
-    
-.texteffect{
 
-    font-family: 'Montserrat', sans-serif;
-    color: #eee;
-
-    background:linear-gradient(45deg,  #07144a 25%, #0a112e 25%, #07144a 75%, #0a112e 75%);
-
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.texteffect p{
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    text-align: center;
-    overflow: hidden;
-    padding: 0.5rem;
-}
-
-.typed-text{
-    font-weight: normal;
-    color:floralwhite;
-}
 
 
 .cursor{
@@ -80,19 +53,6 @@ body {
     animation: blink 1s infinite;
 }
 
-
-.cursor.typing{
-    animation: none;
-}
-
-@keyframes blink {
-    0% {background-color: #ccc;}
-    49% {background-color: #ccc;}
-    50% {background-color: transparent;}
-    99% {background-color: transparent;}
-
-    100% {background-color: #ccc;}
-}
 
 
 
@@ -136,7 +96,6 @@ body {
   
 
 }
-
 
 
 .weldiv{
@@ -431,8 +390,6 @@ li{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
 }
 
-background: linear-gradient(to right, rgb(146, 23, 77) 9.38%, rgb(228, 29, 92) 88.54%)
-
 .bco{
     background: linear-gradient(to right, rgb(146, 23, 77) 9.38%, rgb(228, 29, 92) 88.54%);
 }
@@ -497,3 +454,10 @@ background: linear-gradient(to right, rgb(146, 23, 77) 9.38%, rgb(228, 29, 92) 8
  
  
 }
+
+.imgres{
+    max-width: 100%;
+    height: auto;
+}
+
+
