@@ -103,28 +103,16 @@
      
         <div class="row ">
             <div class="col-12 col-sm-12 d-flex justify-content-center">
-                    <span class="hc" ><h5 class="boxx">BOOK A SPACE</h5></span> 
+                    
+                         
+            <button type="button" class="boxx" data-toggle="modal" data-target="#exampleModal" ><h5 class="mt-1">BOOK A SPACE</h5></button>
+
             </div>
         </div>
     </div>
+
 </header>  
-      <!--social media icons looks posh
-        <div class="row ">
-          
-            <div class="col-12 col-sm-12 d-flex justify-content-center ">
-                
-                    <a class="btn btn-social-icon " href="http://google.com/+"><i class="fa fa-instagram fa-lg"></i></a>
-                    <a class="btn btn-social-icon" href="http://www.facebook.com/profile.php?id="><i class="fa fa-snapchat fa-lg"></i></a>
-                    <a class="btn btn-social-icon " href="http://www.linkedin.com/in/"><i class="fa fa-pinterest fa-lg"></i></a>
-                    <a class="btn btn-social-icon " href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-                    <a class="btn btn-social-icon" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-                    
-                   
-            </div>
-           
-        </div>
-    -->
+    
   
 
 
@@ -185,8 +173,6 @@
 
 
 
-
-
 <!--Community section open-->
 
         
@@ -221,7 +207,7 @@
 
     <!--
     <div class="texteffect">
-        <p> <!-- here any text can be added which will show up at the beginning <span class="typed-text"></span><span class="cursor ">&nbsp;</span></p>
+        <p> here any text can be added which will show up at the beginning <span class="typed-text"></span><span class="cursor ">&nbsp;</span></p>
     </div>
 
 
@@ -518,7 +504,7 @@
             <h4>Checkout our map</h4>
         </div>
 
-        <div class="col-12 col-sm-6 ">
+        <div class="col-12 col-sm-6 map-responsive">
          
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.2887481293114!2d90.41718421493353!3d23.77272998457833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7db1115e09b%3A0x5607414482a283fd!2sBunyan%20House%20by%20Nestor%20Living!5e0!3m2!1sen!2sbd!4v1596995544373!5m2!1sen!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
@@ -526,6 +512,67 @@
     </div>    
 </div>
 
+
+    <!--Form to submit data to  google sheet-->
+
+    
+    
+    <div class="container">
+        <div class="row">
+   
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="text-center">BOOK NOW</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<div class="modal-body">
+<form id="submit-form" action="">
+  <div class="form-group">
+    <label for="fname" >Could you give us your name?</label>
+    <input type="text" id="fname" name="Name" class="form-control" placeholder="Your name..">
+  </div>
+  <div class="form-group">
+    <label for="lname">Which location do you prefer? </label>
+    <input type="text" id="lname" name="Location" class="form-control" placeholder="Location..">
+  </div>
+  <div class="form-group">
+    <label for="bud">   What is your ideal budget?</label>
+    <input type="number" id="lname" name="Budget" class="form-control" placeholder="Budget..">
+  </div>
+  <div class="form-group">
+    <label for="conta">What is your Contact Number?   </label>
+    <input type="number" id="lname" name="Number" class="form-control" placeholder="Contact No..">
+  </div>
+  
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <button type="submit" value="Submit" class="btn btn-primary">Submit </button>
+</form>
+</div>
+
+
+
+
+
+</div>
+</div>
+</div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--End of submit data to  google sheet-->
 
 
 
@@ -578,6 +625,11 @@
                     <p>© Copyright 2020 Nestor Living </p>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-auto mt-3">
+                    <p>Powered By Sitaholic.com </p>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -595,10 +647,44 @@
 
 
        </script>        
-    
-  <!--endbuild--> 
- 
 
+  <!--endbuild--> 
+ <!--Modal script-->
+       <script>
+      $('#exampleModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('whatever') // Extract info from data-* attributes
+     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this)
+      modal.find('.modal-title').text('New message to ' + recipient)
+      modal.find('.modal-body input').val(recipient)
+    })
+      
+      
+      
+       </script>
+
+       <!--Google Sheet JS code-->
+       <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxJngppg0myhQsU-sIhEN5bCnHnTbLJJcZ1QG3z-g/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 
 
 </body>

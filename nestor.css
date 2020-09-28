@@ -344,7 +344,7 @@ color: white;
     border: 2px solid rgb(76, 181, 174);
     color: rgb(76, 181, 174);
     background-color: white;
-    padding: 10px 25px 10px 25px;
+    padding: 5px 25px 5px 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 20px;
 }
@@ -461,3 +461,16 @@ li{
 }
 
 
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
